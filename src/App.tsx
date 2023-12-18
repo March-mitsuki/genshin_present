@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import GenshinLoading from "./components/GenshinLoading";
 import { Box, Button, Center, Spinner } from "@chakra-ui/react";
+import Mondstadt from "./pages/mondstadt";
 
 export default function App() {
   const [loadingProgress, setLoadingProgress] = useState(0);
@@ -27,13 +28,24 @@ export default function App() {
 
   return (
     <Box>
-      <Center mt="2rem">
-        <Button>
+      <Mondstadt />
+
+      <Center h="calc( 100vh - 4rem )">
+        <Button
+          variant="outline"
+          bg="rgba(255, 255, 255, 0.4)"
+          _hover={{
+            bg: "transparent",
+          }}
+        >
           <Spinner mr={2} />
           Still working...
         </Button>
       </Center>
-      <Center mt="2rem">s1b10210160 楊澤華</Center>
+
+      <Center mt="2rem" bg="rgba(255, 255, 255, 0.4)">
+        s1b10210160 楊澤華
+      </Center>
     </Box>
   );
 }
