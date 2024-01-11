@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import GenshinLoading from "./components/GenshinLoading";
-import { Box, Button, Center, Spinner } from "@chakra-ui/react";
+import { Box, Center, Image } from "@chakra-ui/react";
 import Mondstadt from "./pages/mondstadt";
 
 export default function App() {
@@ -31,16 +31,7 @@ export default function App() {
       <Mondstadt />
 
       <Center h="calc( 100vh - 4rem )">
-        <Button
-          variant="outline"
-          bg="rgba(255, 255, 255, 0.4)"
-          _hover={{
-            bg: "transparent",
-          }}
-        >
-          <Spinner mr={2} />
-          Still working...
-        </Button>
+        <Image src="/genshin_logo.png" />
       </Center>
 
       <Center mt="2rem" bg="rgba(255, 255, 255, 0.4)">
